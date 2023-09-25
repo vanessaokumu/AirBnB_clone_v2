@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+a script that starts a Flask web application:
+Your web application must be listening on 0.0.0.0, port 5000
+"""
 from flask import Flask, escape
 
 # Create a Flask application
@@ -27,6 +31,7 @@ def python(text):
     text = escape(text).replace('_', ' ')
     return "Python {}".format(text)
 
+# Run the application
 if __name__ == '__main__':
     # Run the Flask app on 0.0.0.0:5000
     app.run(host='0.0.0.0', port=5000)
